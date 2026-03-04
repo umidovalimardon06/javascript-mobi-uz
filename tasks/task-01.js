@@ -1,4 +1,4 @@
-const user = new Object();
+const user = {};
 
 Object.assign(user,{name:'John'});
 Object.assign(user,{surname:'Smith'});
