@@ -1,24 +1,12 @@
 const prompt = require("prompt-sync")();
 
-function Calculator() {
-    this.a = Number.MIN_SAFE_INTEGER;
-    this.b = Number.MIN_SAFE_INTEGER;
-
-    this.read = function read() {
-        this.a = Number(prompt("a:"));
-        this.b = Number(prompt("b:"));
+function readNumber() {
+    let inputValue = Number(prompt("enter the value (exit:0): "));
+    while (Number.isNaN(inputValue)) {
+        inputValue = Number(prompt("re-enter the value (exit:0): "));
     }
-
-    this.sum = function sum() {
-        return this.a + this.b;
-    }
-
-    this.mul = function mul() {
-        return this.a * this.b;
-    }
+    if (inputValue === 0) return null;
+    return inputValue;
 }
 
-let calculator = new Calculator();
-calculator.read();
-console.log(`Sum:${calculator.sum()}`);
-console.log(`Mul:${calculator.mul()}`);
+console.log(readNumber());

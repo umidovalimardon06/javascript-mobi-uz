@@ -1,1 +1,1 @@
-[Task-descriptions](https://javascript.info/constructor-new#tasks)
+[Task-descriptions](https://javascript.info/number#tasks)
