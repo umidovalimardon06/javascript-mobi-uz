@@ -1,12 +1,13 @@
-const prompt = require("prompt-sync")();
+function checkSpam(str) {
+    let uppercaseForm = str.toUpperCase();
 
-function readNumber() {
-    let inputValue = Number(prompt("enter the value (exit:0): "));
-    while (Number.isNaN(inputValue)) {
-        inputValue = Number(prompt("re-enter the value (exit:0): "));
+    if (uppercaseForm.indexOf("VIAGRA") !== -1 ||
+        uppercaseForm.indexOf("XXX") !== -1) {
+        return true;
     }
-    if (inputValue === 0) return null;
-    return inputValue;
+    return false;
 }
 
-console.log(readNumber());
+console.log(checkSpam("dsaljdViAgRAdsakljdsla"));
+console.log(checkSpam("thereisnoviagr or but xxx"));
+console.log(checkSpam("thereisnoviagr nor xx21"));

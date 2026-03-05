@@ -1,6 +1,11 @@
-const prompt = require("prompt-sync")();
+function ucFirst(str) {
+    let newStr = "";
+    for (let i = 0; i < str.length; i++) {
+        if (i === 0) {
+            newStr += str[i].toUpperCase();
+        } else newStr += str[i];
+    }
+    return newStr;
+}
 
-let number1 = Number(prompt("birinchi-raqamni kiriting:"));
-let number2 = Number(prompt("ikkinchi-raqamni kiriting:"));
-
-console.log(`Summa: ${number1 + number2}`);
+console.log(ucFirst('hiii'))

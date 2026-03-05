@@ -1,5 +1,9 @@
-function random(min, max) {
-    return Math.round(min + Math.random() * (max - min + 1));
+function truncate(str,maxLength) {
+    let sliced = "";
+    if (str.length > maxLength) {
+         sliced = str.slice(0,maxLength) + "...";
+    }
+    return sliced;
 }
 
-console.log(random(1, 10));
+console.log(truncate("What I'd like to tell on this topic is:",20));
