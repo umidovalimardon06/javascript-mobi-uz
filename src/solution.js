@@ -7,15 +7,22 @@ let handleSqrt = (inputValue) => {
 
     } else if (typeof inputValue === "string") {
         inputValue = Number(inputValue);
+        if (isNaN(inputValue)) return 'error';
         return  getSqrt(inputValue);
 
+    } else if (typeof inputValue === "undefined") {
+        return "undefined-error";
+
     } else if (typeof inputValue === "object") {
-        if (Array.isArray(inputValue)) {
-            const squareRootedArray = [];
-            for (let i of inputValue) {
-                squareRootedArray.push(getSqrt(i));
-            }
-            return squareRootedArray;
+        if (inputValue === null) {
+            return "null-error";
+
+        } else if (Array.isArray(inputValue)) {
+            const sum = inputValue
+                .filter(isNumCallback)
+                .reduce(getSumCallback,0);
+
+            return getSqrt(sum);
 
         } else {
             let sum = 0;
@@ -27,7 +34,15 @@ let handleSqrt = (inputValue) => {
     }
 }
 
+function isNumCallback(x) {
+    return typeof x === "number";
+}
+
+function getSumCallback(total,x) {
+    return total + x;
+}
 
 function getSqrt(inputValue) {
+    if (inputValue < 0) return "negative-error";
     return Math.sqrt(inputValue);
 }
