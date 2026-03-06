@@ -1,20 +1,34 @@
-const prompt = require("prompt-sync")();
-
-function sumCallback(total, x) {
-    return total + x;
-}
-
-function sumInput() {
-    let array = [];
-    while (true) {
-        let inputValue = prompt("Enter a value:");
-        if (inputValue === "" || inputValue === null || !isFinite(inputValue)) {
-            break;
+function filterRangeInPlace(arr,min,max) {
+    let filteredArray = [];
+    for (let i of arr) {
+        if (isInTheRange(i)) {
+            filteredArray.push(i);
         }
-        array.push( Number(inputValue));
     }
-    let sum = array.reduce(sumCallback);
-    return sum;
+
+    function isInTheRange(i) {
+        return (min <= i && i <= max);
+    }
+    return filteredArray;
 }
 
-console.log(sumInput());
+let array = [5,3,8,1];
+let result = filterRangeInPlace(array,1,4);
+console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

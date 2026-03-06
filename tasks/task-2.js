@@ -1,8 +1,17 @@
-let arr = ["a","b"];
+function filterRange(arr,min,max) {
 
-arr.push(function () {
-        console.log("this is a function inside an array");
+    let filteredArray = [];
+    for (let i of arr) {
+        if (isInTheRange(i)) {
+            filteredArray.push(i);
+        }
     }
-);
 
-arr[2]();  // funksiyalar = first-class-object.
+    function isInTheRange(i) {
+        return (min <= i && i <= max);
+    }
+
+    return filteredArray;
+}
+
+console.log(filterRange([5, 3, 8],5,6));
