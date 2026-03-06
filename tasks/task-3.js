@@ -1,9 +1,20 @@
-function truncate(str,maxLength) {
-    let sliced = "";
-    if (str.length > maxLength) {
-         sliced = str.slice(0,maxLength) + "...";
-    }
-    return sliced;
+const prompt = require("prompt-sync")();
+
+function sumCallback(total, x) {
+    return total + x;
 }
 
-console.log(truncate("What I'd like to tell on this topic is:",20));
+function sumInput() {
+    let array = [];
+    while (true) {
+        let inputValue = prompt("Enter a value:");
+        if (inputValue === "" || inputValue === null || !isFinite(inputValue)) {
+            break;
+        }
+        array.push( Number(inputValue));
+    }
+    let sum = array.reduce(sumCallback);
+    return sum;
+}
+
+console.log(sumInput());

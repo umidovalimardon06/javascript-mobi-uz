@@ -1,13 +1,8 @@
-function checkSpam(str) {
-    let uppercaseForm = str.toUpperCase();
+let arr = ["a","b"];
 
-    if (uppercaseForm.indexOf("VIAGRA") !== -1 ||
-        uppercaseForm.indexOf("XXX") !== -1) {
-        return true;
+arr.push(function () {
+        console.log("this is a function inside an array");
     }
-    return false;
-}
+);
 
-console.log(checkSpam("dsaljdViAgRAdsakljdsla"));
-console.log(checkSpam("thereisnoviagr or but xxx"));
-console.log(checkSpam("thereisnoviagr nor xx21"));
+arr[2]();  // funksiyalar = first-class-object.
