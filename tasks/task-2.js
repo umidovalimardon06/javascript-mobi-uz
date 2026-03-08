@@ -1,17 +1,3 @@
-function filterRange(arr,min,max) {
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 
-    let filteredArray = [];
-    for (let i of arr) {
-        if (isInTheRange(i)) {
-            filteredArray.push(i);
-        }
-    }
-
-    function isInTheRange(i) {
-        return (min <= i && i <= max);
-    }
-
-    return filteredArray;
-}
-
-console.log(filterRange([5, 3, 8],5,6));
+// problem is going to be solved soon.

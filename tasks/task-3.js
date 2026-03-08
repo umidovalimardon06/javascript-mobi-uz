@@ -1,34 +1,11 @@
-function filterRangeInPlace(arr,min,max) {
-    let filteredArray = [];
-    for (let i of arr) {
-        if (isInTheRange(i)) {
-            filteredArray.push(i);
-        }
-    }
+let map = new Map();
+map.set("name", "John");
 
-    function isInTheRange(i) {
-        return (min <= i && i <= max);
-    }
-    return filteredArray;
+let keys = [];
+for (let key of map.keys()) {
+    keys.push(key);
 }
 
-let array = [5,3,8,1];
-let result = filterRangeInPlace(array,1,4);
-console.log(result);
+keys.push("more");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(keys);

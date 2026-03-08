@@ -1,1 +1,1 @@
-[Task-descriptions](https://javascript.info/array-methods#tasks)
+[Task-descriptions](https://javascript.info/map-set#tasks)
