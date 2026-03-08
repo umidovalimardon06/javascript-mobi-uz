@@ -1,13 +1,10 @@
-let values = ["Hare", "Krishna", "Hare", "Krishna",
-    "Krishna", "Krishna", "Hare", "Hare", ":-O"
+let messages = [
+    {text: "Hello", from: "John"},
+    {text: "How goes?", from: "John"},
+    {text: "See you soon", from: "Alice"}
 ];
 
-function retrieveUniqueElements(arr) {
-    let set = new Set();
-    for (let value of values) {
-        set.add(value);
-    }
-    return set;
-}
-
-console.log(retrieveUniqueElements(values));
+let messagesWeakSet = new WeakSet();
+messagesWeakSet.add(messagesWeakSet[0]);
+messagesWeakSet.add(messagesWeakSet[1]);
+messagesWeakSet.add(messagesWeakSet[2]);
