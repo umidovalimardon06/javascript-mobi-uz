@@ -1,8 +1,5 @@
 import {AthleteBuilder} from "./models/AthleteBuilder.js";
+import {athletesArray} from "./utils/AthleteArray.js";
+import {sortByMedals} from "./utils/SortByMedals.js";
 
-let athlete = new AthleteBuilder();
-athlete.increaseMedals(1,3,5);
-console.log(athlete);
-
-let athleteClone = athlete.copy();
-console.log(athleteClone);
+/* test-code */
