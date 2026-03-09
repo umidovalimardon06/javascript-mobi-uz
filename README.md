@@ -1,1 +1,1 @@
-[Task-descriptions](https://javascript.info/weakmap-weakset#tasks)
+[Task-descriptions](https://javascript.info/keys-values-entries#tasks)

@@ -1,10 +1,15 @@
-let messages = [
-    {text: "Hello", from: "John"},
-    {text: "How goes?", from: "John"},
-    {text: "See you soon", from: "Alice"}
-];
+let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+};
 
-let messagesWeakSet = new WeakSet();
-messagesWeakSet.add(messagesWeakSet[0]);
-messagesWeakSet.add(messagesWeakSet[1]);
-messagesWeakSet.add(messagesWeakSet[2]);
+function sumValues(obj) {
+    let sum = 0;
+    for (const val of Object.values(obj)) {
+        sum += val;
+    }
+    return sum;
+}
+
+console.log(sumValues(salaries));
