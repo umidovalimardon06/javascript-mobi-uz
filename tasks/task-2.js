@@ -1,22 +1,15 @@
-let room = {
-    number: 23
-};
-
-let meetup = {
-    title: "Conference",
-    occupiedBy: [{name: "John"}, {name: "Alice"}],
-    place: room
-};
-
-room.occupiedBy = meetup;
-meetup.self = meetup;
-
-function removeSelf(key,value) {
-    if (key !== "" && value === meetup) {
-        value = undefined;
+function continuousSum(initialValue) {
+    let sum = initialValue;
+    function f(b) {
+        sum += b;
+        return f;
     }
-    return value;
+
+    f.valueOf = function() {
+        return sum;
+    };
+
+    return f;
 }
 
-let meetupJson = JSON.stringify(meetup,removeSelf);
-console.log(meetupJson);
+console.log(continuousSum(1)(2)(7).valueOf());
