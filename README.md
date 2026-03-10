@@ -1,1 +1,1 @@
-[Task-descriptions](https://javascript.info/keys-values-entries#tasks)
+[Task-descriptions](https://javascript.info/destructuring-assignment#tasks)

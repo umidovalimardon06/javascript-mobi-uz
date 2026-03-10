@@ -4,12 +4,17 @@ let salaries = {
     "Mary": 250
 };
 
-function countProperties(obj) {
-    let count = 0;
-    for (const val of Object.keys(obj)) {
-        count++;
+function topSalary(salaries) {
+    let salary = 0;
+    let name = null;
+
+    for(let [n, s] of Object.entries(salaries)) {
+        if (salary < s) {
+            salary = s;
+            name = n;
+        }
     }
-    return count;
+    return name;
 }
 
-console.log(countProperties(salaries));
+console.log(topSalary(salaries));

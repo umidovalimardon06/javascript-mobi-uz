@@ -1,15 +1,12 @@
-let salaries = {
-    "John": 100,
-    "Pete": 300,
-    "Mary": 250
+let user = {
+    name : "John",
+    years : 30
 };
 
-function sumValues(obj) {
-    let sum = 0;
-    for (const val of Object.values(obj)) {
-        sum += val;
-    }
-    return sum;
-}
+let name = user.name;
+let age = user.years;
+let isAdmin = user.hasOwnProperty("isAdmin");
 
-console.log(sumValues(salaries));
+console.log(name);
+console.log(age);
+console.log(isAdmin);
