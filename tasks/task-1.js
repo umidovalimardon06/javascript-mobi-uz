@@ -1,2 +1,7 @@
-let date = new Date(2012,1,20,3,12);
-console.log(date.toLocaleString());
+let user = {
+    name : "John Smith",
+    age : 35
+};
+
+let userJson = JSON.stringify(user);
+console.log(userJson);

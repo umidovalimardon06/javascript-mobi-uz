@@ -1,8 +1,22 @@
-function getWeekDay(date) {
-    let dayIndex = date.getDay();
-    let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
-    return days[dayIndex];
+let room = {
+    number: 23
+};
+
+let meetup = {
+    title: "Conference",
+    occupiedBy: [{name: "John"}, {name: "Alice"}],
+    place: room
+};
+
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+function removeSelf(key,value) {
+    if (key !== "" && value === meetup) {
+        value = undefined;
+    }
+    return value;
 }
 
-let date = new Date(2014, 0, 3);
-console.log(getWeekDay(date));
+let meetupJson = JSON.stringify(meetup,removeSelf);
+console.log(meetupJson);
