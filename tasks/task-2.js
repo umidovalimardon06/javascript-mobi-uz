@@ -1,11 +1,21 @@
-let i = 0;
+let head = {
+    glasses: 1
+};
 
-setTimeout(() => console.log("Here is schedule:"), 100);
+let table = {
+    __proto__ : head,
+    pen: 3
+};
 
-for(let j = 0; j < 10000; j++) {
-    i++;
-    console.log(i);
-}
+let bed = {
+    __proto__: table,
+    sheet: 1,
+    pillow: 2
+};
 
-/* birinchi loop ishlaydi,schedule call stackdan
- tashqarida(callback queue)da saqalandi.*/
+let pockets = {
+    __proto__ : bed,
+    money: 2000
+};
+
+

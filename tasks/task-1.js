@@ -1,13 +1,16 @@
-function counter(start,end) {
-    let count = start;   // private variable
+let animal = {
+    jumps : null
+};
 
-    let id = setInterval(() => {
-        console.log(count);
-        if (count === end) {
-            clearInterval(id);
-        }
-        count++;
-    },1000);
+let rabbit = {
+    __proto__ : animal,
+    jumps: true
 }
 
-counter(1,10);
+console.log(rabbit.jumps);
+delete rabbit.jumps;
+
+console.log(rabbit.jumps);
+
+delete animal.jumps;
+console.log(rabbit.jumps);
