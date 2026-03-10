@@ -1,15 +1,11 @@
-function continuousSum(initialValue) {
-    let sum = initialValue;
-    function f(b) {
-        sum += b;
-        return f;
-    }
+let i = 0;
 
-    f.valueOf = function() {
-        return sum;
-    };
+setTimeout(() => console.log("Here is schedule:"), 100);
 
-    return f;
+for(let j = 0; j < 10000; j++) {
+    i++;
+    console.log(i);
 }
 
-console.log(continuousSum(1)(2)(7).valueOf());
+/* birinchi loop ishlaydi,schedule call stackdan
+ tashqarida(callback queue)da saqalandi.*/

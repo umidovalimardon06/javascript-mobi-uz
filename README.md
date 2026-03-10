@@ -1,1 +1,1 @@
-[Task-descriptions](https://javascript.info/json#tasks)
+[Task-descriptions](https://javascript.info/settimeout-setinterval#tasks)

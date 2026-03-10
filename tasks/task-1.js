@@ -1,31 +1,13 @@
-function makeCounter() {
-    let count = 0;
+function counter(start,end) {
+    let count = start;   // private variable
 
-    function counter() {
+    let id = setInterval(() => {
+        console.log(count);
+        if (count === end) {
+            clearInterval(id);
+        }
         count++;
-        return count;
-    }
-
-    function decrease() {
-        count--;
-        return count;
-    }
-
-    function set(value) {
-        count = value;
-    }
-
-    return {
-        counter,
-        decrease,
-        set
-    };
+    },1000);
 }
 
-let counter = makeCounter();
-
-console.log(counter.counter());
-console.log(counter.counter());
-console.log(counter.decrease());
-counter.set(10);
-console.log(counter.counter());
+counter(1,10);
