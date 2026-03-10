@@ -1,16 +1,17 @@
-let animal = {
-    jumps : null
-};
+class Animal {
 
-let rabbit = {
-    __proto__ : animal,
-    jumps: true
+    constructor(name) {
+        this.name = name;
+    }
+
 }
 
-console.log(rabbit.jumps);
-delete rabbit.jumps;
+class Rabbit extends Animal {
+    constructor(name) {
+        super(name)
+        this.created = Date.now();
+    }
+}
 
-console.log(rabbit.jumps);
-
-delete animal.jumps;
-console.log(rabbit.jumps);
+let rabbit = new Rabbit("White Rabbit"); // Error: this is not defined
+console.log(rabbit)
