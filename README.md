@@ -1,1 +1,1 @@
-[Task-descriptions](https://javascript.info/destructuring-assignment#tasks)
+[Task-descriptions](https://javascript.info/date#tasks)

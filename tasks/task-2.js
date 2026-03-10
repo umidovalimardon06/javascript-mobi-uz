@@ -1,20 +1,8 @@
-let salaries = {
-    "John": 100,
-    "Pete": 300,
-    "Mary": 250
-};
-
-function topSalary(salaries) {
-    let salary = 0;
-    let name = null;
-
-    for(let [n, s] of Object.entries(salaries)) {
-        if (salary < s) {
-            salary = s;
-            name = n;
-        }
-    }
-    return name;
+function getWeekDay(date) {
+    let dayIndex = date.getDay();
+    let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+    return days[dayIndex];
 }
 
-console.log(topSalary(salaries));
+let date = new Date(2014, 0, 3);
+console.log(getWeekDay(date));

@@ -1,12 +1,2 @@
-let user = {
-    name : "John",
-    years : 30
-};
-
-let name = user.name;
-let age = user.years;
-let isAdmin = user.hasOwnProperty("isAdmin");
-
-console.log(name);
-console.log(age);
-console.log(isAdmin);
+let date = new Date(2012,1,20,3,12);
+console.log(date.toLocaleString());
