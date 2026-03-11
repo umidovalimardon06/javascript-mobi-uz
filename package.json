@@ -1,0 +1,13 @@
+{
+  "name": "mobi-uz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Application.js",
+  "type": "module",
+  "scripts": {
+    "start": "node lesson/static-methods/App.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

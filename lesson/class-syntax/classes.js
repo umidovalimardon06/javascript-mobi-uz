@@ -1,4 +1,4 @@
-class Person {
+export default class Person{
     constructor(name,age) {
         this.name = name;
         this.age = age;
@@ -8,6 +8,3 @@ class Person {
         console.log(`Hello, my name is:`+this.name)
     }
 }
-
-let user1 = new Person("Amir",19);
-user1.greet();
