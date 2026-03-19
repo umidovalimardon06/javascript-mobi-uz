@@ -5,8 +5,8 @@ export function createTaskManager() {
 
     const TaskManager = {
         addTask:
-            function (nameOfTask, delayOfTask, ...tasksTags) {
-                let taskObj = createTask(nameOfTask, delayOfTask, tasksTags);
+            function (nameOfTask, delayOfTask, ...tagsOfTask) {
+                let taskObj = createTask(nameOfTask, delayOfTask, tagsOfTask);
                 tasksArray.push(taskObj);
             },
 
