@@ -1,4 +1,4 @@
-import {createTask, isOutOfLength,execute} from "./functions.js";
+import {createTask,execute} from "./functions.js";
 
 export function createTaskManager() {
     const tasksArray = [];
@@ -13,7 +13,7 @@ export function createTaskManager() {
         runAllTasks:
             function (taskIndex = 0) {
                 let tasksLength = tasksArray.length;
-                if (isOutOfLength(taskIndex, tasksLength)) return;
+                if (taskIndex >= tasksLength) return;
 
                 const currentTask = tasksArray[taskIndex];
                 execute(currentTask, taskIndex, TaskManager);
@@ -22,5 +22,3 @@ export function createTaskManager() {
 
     return TaskManager;
 }
-
-

@@ -14,10 +14,6 @@ export function createTask(nameOfTask, delayOfTask, tasksTags) {
     return taskObj;
 }
 
-export function isOutOfLength(index, tasksLength) {
-    return index >= tasksLength;
-}
-
 export function execute(currentTask, taskIndex, runner) {
     console.log(`"${currentTask.taskName}" boshlandi delay ${currentTask.taskDelay/1000}s`);
     setTimeout(() => {
